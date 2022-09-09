@@ -18,14 +18,9 @@ $path = "/home/araihzsn/gamenight/";
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
-<script src="<?php echo $url; ?>js/jquery.easing.1.3.js"></script>
-<script src="<?php echo $url; ?>js/detectmobilebrowser.js"></script>
 <link rel="icon" href="<?php echo $url; ?>imgs/gnpLogo.png">
-<link rel="apple-touch-icon" sizes="100x100" href="<?php echo $url; ?>imgs/gnpLogo.png" />
-<?php include($path . 'includes/analytics.dat'); ?>
-<script src="<?php echo $url; ?>js/spin.js"></script>
-<script src="<?php echo $url; ?>js/spinopts.js"></script>
-<title>gameNight+ | Playing Wildcard Cricket</title>
+<link rel="apple-touch-icon" sizes="100x100" href="imgs/gnpLogo.png" />
+<title>Playing Wildcard Cricket</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <style>
 html{
