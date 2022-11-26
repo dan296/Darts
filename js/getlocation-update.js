@@ -737,7 +737,7 @@ $('#userstartgamebutton').click( function(event) {
       success: function(data){
         if(data){
             //console.log(data);
-        window.location.href="https://www.gamenight.plus/bullseye/play"+dartURL+"/";
+        window.location.href="../play"+dartURL+"/";
         }
       }
     })
