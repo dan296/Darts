@@ -1,0 +1,3 @@
+<?php
+$mysqli = new mysqli("localhost", "araihzsn_gamenightmysqluser", "Thisisgamenightmysqluser123", "araihzsn_gamenightbeta");
+?>

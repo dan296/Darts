@@ -1,0 +1,13 @@
+<div id="donate"><i class="fas fa-handshake" aria-hidden="true"></i></div>
+<div id="join" class="subtitle">
+	<form name="gamecodeform" action="../joingame.php" autocomplete="off" method="POST">
+	Join a game: 
+	<script>
+	if($.browser.mobile){
+	document.write("<br />");
+	}
+	</script>
+	<?php include($path . "includes/joininputs.dat"); ?>
+	</form>
+</div>
+<?php include($path . "includes/copy.dat"); ?>

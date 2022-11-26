@@ -1,0 +1,259 @@
+<?php
+$gamepagestructurefile = 'gamepagestructure.dat';
+$handle = fopen($gamepagestructurefile, 'r');
+$gamepagestructure = fread($handle, filesize($gamepagestructurefile));
+
+$gamepagestructurelines = explode(PHP_EOL, $gamepagestructure);
+
+$gamepagedescriptions = array_filter(array_slice($gamepagestructurelines, 0, 1));
+$gamepagedescription = explode("\t", $gamepagedescriptions[0]);
+$gamepagetitle = $gamepagedescription[0];
+$gamepagedb = $gamepagedescription[1];
+$gamepagecss = $gamepagedescription[2];
+$gamepageid = $gamepagedescription[3];
+
+$gamepagestructurelines = array_filter(array_slice($gamepagestructurelines, 1));
+$tabs = array();
+$dats = array();
+$titles = array();
+$offsets = array();
+foreach($gamepagestructurelines as $gamepagestructureline){
+	$parts = explode("\t", $gamepagestructureline);
+	$tabs[] = $parts[0];
+	$divs[] = $parts[1];
+	$dats[] = $parts[2];
+	$offsets[] = $parts[3];
+}
+?>
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<?php include('includes/head.dat'); ?>
+		<link rel="stylesheet" type="text/css" href="<?php echo $url; ?>/css/gamepage.css">
+		<title>GameNight+ | <?php 
+		echo $gamepagetitle;
+		?>
+		</title>
+		<link rel="stylesheet" type="text/css" href="<?php echo $url . '/css/' . $gamepagecss; ?>">
+	</head>
+<?php include($path . "includes/controlpage.dat"); ?>
+	<body>
+		<div id="pagewrapper">
+			<div id="header">
+				<div id="pagetitle"><?php include($gamepageid.'pagetitle.svg'); ?></div>
+                <script>
+                $( document ).tooltip();
+                $(document).tooltip({
+                    tooltipClass: "tooltiptext",
+                    track: true,
+                });
+                </script>
+				<div id="pagenav">
+					<?php
+					$i = 1;
+					foreach($tabs as $tab){
+						if($i < count($tabs)){ ?>
+						<p id="pagenav<?php echo $i; ?>" class="pagenavs"><span class="navwords"><?php echo $tab; ?></span></p>
+						<div id="pagenavbarrier<?php echo $i; ?>" class="pagenavbarriers"><div class="pagenavbarrierelements"></div></div>
+						<?php } else { ?>
+						<p id="pagenav<?php echo $i; ?>" class="pagenavs"><span class="navwords"><?php echo $tab; ?></span></p>
+						<?php }
+					$i++;
+					}
+					?>
+					<div id="navunderline"><div id="navunderlineelement"></div></div>
+				</div>
+				<script>
+					var sessionsignin = false;
+var freesessionsignin = false;
+$('#gosignin, #signinlogo').hide();
+<?php if(isset($_SESSION["signedin"])){?>
+//sessionsignin = <?php echo $_SESSION["signedin"] ?>;
+<?php } ?>
+<?php if(isset($_SESSION["freesignedin"])){?>
+//freesessionsignin = <?php echo $_SESSION["freesignedin"] ?>;
+<?php } ?>
+/*if(sessionsignin || freesessionsignin){
+  $('#goprofile, #profilelogo, #gosignout, #signoutlogo').show();
+  $('#gosignin, #signinlogo').hide();
+}else{
+  $('#gosignin, #signinlogo').show();
+}
+*/
+					//console.log(<?php echo $gamepagedb ?>);
+					var shiftnum = 0;
+				
+					var color = "gray";
+					var headerHeight = $('#header').height() + 50;
+					var pagenav1locate;
+					var pagenav2locate;
+					var pagenav3locate;
+					var pagenavclicked = false;
+					//var scrollBottom = $(window).scrollTop() + (0.5 * $(window).height());
+					//var scrollBottom;
+
+					function pagenavlocate(){
+						var scrollBottom = $(window).scrollTop() + headerHeight;
+						<?php
+						$i = 1;
+						foreach($offsets as $offset){ ?>
+							pagenav<?php echo $i; ?>locate = $('#pagenav<?php echo $i; ?> .navwords').offset().left - <?php echo $offset; ?>;
+						<?php 
+						$i++;
+						} ?>
+					}
+
+					function underlinebarmove(){
+						var scrollBottom = $(window).scrollTop() + headerHeight;
+						pagenavlocate();
+						$('#navunderlineelement').css('position', 'absolute');
+						<?php 
+						for($i = count($divs); $i > 0; $i--){
+							if($i == count($divs)){ ?>
+								if(scrollBottom >= $('#<?php echo $divs[$i-1]; ?>').offset().top){
+									$('#navunderlineelement').css('left', pagenav<?php echo $i; ?>locate);
+									$('#navunderlineelement').css('width', $('#pagenav<?php echo $i; ?> .navwords').width());
+								}
+							<?php }else if($i == 1){ ?>
+								else{
+									$('#navunderlineelement').css('left', pagenav<?php echo $i; ?>locate);
+									$('#navunderlineelement').css('width', $('#pagenav<?php echo $i; ?> .navwords').width());
+								}
+							<?php }else{ ?>
+								else if(scrollBottom >= $('#<?php echo $divs[$i-1]; ?>').offset().top){
+									$('#navunderlineelement').css('left', pagenav<?php echo $i; ?>locate);
+									$('#navunderlineelement').css('width', $('#pagenav<?php echo $i; ?> .navwords').width());
+								}
+							<?php }
+						} ?>
+						$('#navunderlineelement').fadeIn();	
+					}
+
+					//Onload underline bar move
+					$(window).load(underlinebarmove);
+					
+					//Onresize underline bar move
+					$(window).resize(underlinebarmove);
+
+					//Onscroll underline bar
+					$(window).scroll(function() {
+						if(!pagenavclicked){
+							var scrollBottom = $(window).scrollTop() + headerHeight;
+							<?php 
+							for($i = 1; $i <= count($divs); $i++){ ?>
+									if(scrollBottom >= $('#<?php echo $divs[$i-1]; ?>').offset().top){
+										var pagenav<?php echo $i;?>w = $('#pagenav<?php echo $i; ?> .navwords').width();
+										$('#navunderlineelement').stop().animate({
+											left: pagenav<?php echo $i; ?>locate,
+											width: pagenav<?php echo $i; ?>w
+										}, 250);
+									}
+								<?php 
+							} ?>
+						}
+					});
+					
+					//Onclick changing underline bar location and scrolling page
+					<?php
+					$i = 1;
+					foreach($divs as $div){
+						 ?>
+						$('#pagenav<?php echo $i; ?> .navwords').click( function() {
+							pagenavclicked = true;
+							var pagenav<?php echo $i; ?>w = $('#pagenav<?php echo $i; ?> .navwords').width();
+							$('#navunderlineelement').stop().animate({
+								left: pagenav<?php echo $i; ?>locate,
+								width: pagenav<?php echo $i; ?>w
+							}, { 
+								duration: 250, 
+								complete: function() {
+      								pagenavclicked = false;
+    							}
+    						}
+    						);
+							$('html, body').stop().animate({
+								scrollTop: $('#<?php echo $div; ?>').offset().top - headerHeight
+							}, 250, function(){
+							});
+						});
+					<?php 
+						$i++;
+					} ?>
+//Navigating to different sections of page on mobile
+<?php
+$i = 1;
+foreach($divs as $div){
+if($i == 1){ ?>
+$('#ctrlbtn<?php echo $i; ?>').click( function() {
+
+$('.controlbutton').css('opacity','0');
+setTimeout(
+function()
+{
+	$('#pagewrapper, #header, #controlbars').css('filter','unset');
+$('#controlpage').css('width','0%');
+$('#controlbars').animate({opacity: 1});
+}, 200)
+
+$('html, body').stop().animate({
+scrollTop: $('#header').height()
+}, 200, function(){
+})
+})
+<?php }else{ ?>
+$('#ctrlbtn<?php echo $i; ?>').click( function() {
+
+$('.controlbutton').css('opacity','0');
+setTimeout(
+function()
+{
+$('#pagewrapper, #header, #controlbars').css('filter','unset');
+$('#controlpage').css('width','0%');
+$('#controlbars').animate({opacity: 1});
+}, 200)
+
+$('html, body').stop().animate({
+scrollTop: $('#<?php echo $div; ?>').offset().top -40
+}, 200, function(){
+})
+})
+<?php }
+$i++;
+} ?>
+
+</script>
+				<div id="headerfader"></div>
+			</div>
+			<div id="pagecontent" class="animated fadeIn">
+			<?php
+			$i = 1;
+			foreach($divs as $key=>$div){ 
+				if($i == count($divs)){ ?>
+				<div id="<?php echo $div; ?>"><?php include($dats[$key]); ?></div>
+				<?php } elseif ($i == 1 || $gamepagedb == "bullseye") { ?>
+				<div class="gamepagecontentmiddledivs" id="<?php echo $div; ?>"><?php include($dats[$key]); ?></div>
+				<?php } else { ?>
+				<div class="gamepagecontentmiddledivs" id="<?php echo $div; ?>">
+					<span class="instructionsheading">Create a Game:</span>
+					<form id="gamesetupform">
+					    <input type="hidden" name="gamename" value="<?php echo "$gamepagedb"; ?>"> 
+					    <input id='lat' type="hidden" name="latitude" value="0">
+					    <input id='long' type="hidden" name="longitude" value="0">
+					    <div id="gamesetuptablesubmitbutton">
+					        <div>
+					            <input id="userstartgamebutton" type="submit" name="submit" value="Start Game">
+					        </div>
+					    </div>
+					</form>
+				</div>
+				<?php } 
+			$i++;
+			} ?>
+			</div>
+			<script src="js/bullseye.js"></script>
+		</div>
+		<a id='outerlink' style='opacity:0'></a>
+		<script src="js/getlocation-update.js"></script>
+		<script src="js/gamepage.js"></script>
+	</body>
+</html>

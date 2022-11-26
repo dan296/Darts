@@ -1,0 +1,11 @@
+<div id="social">
+  <a id='fbpage' target='_blank'><i class="fab fa-facebook-square" title="Facebook"></i></a>
+  <a id='igpage' target='_blank'><i class="fab fa-instagram" title="Instagram"></i></a>
+  <a id='twtpage' target='_blank'><i class="fab fa-twitter" title="Twitter"></i></a>
+</div>
+<div id="social2">
+<a id='discpage' target='_blank'><i class="fab fa-discord" title = "Discord"></i></a>
+  <a id='tchpage' target='_blank'><i class="fab fa-twitch" title = "Twitch"></i></a>
+  <a id='ytpage' target='_blank'><i class="fab fa-youtube" title = "YouTube"></i></a>
+  <!--<a id='tikpage' target='_blank'><i class="fab fa-twitch" title = "Tik Tok"></i></a>-->
+</div>

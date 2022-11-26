@@ -1,0 +1,4 @@
+<?php 
+include('head.dat'); 
+?>
+<link rel="stylesheet" type="text/css" href="<?php echo $url; ?>/css/gamepage.css">

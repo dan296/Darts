@@ -1,0 +1,190 @@
+<div style="
+    height: 320px;
+    margin:auto;
+    position: relative;
+    background: transparent;
+    width:320px;
+    top: -90px;
+    margin-bottom: -180px;
+    transform: scale(0.88);
+">
+<canvas id='checkcircle' width='360' height='360'></canvas>
+<div id='lock'>
+  <div id='locktop'>
+  <div id='semicircle'> 
+</div>
+  <div id='leftline'> 
+  <div id='covercircle'></div>
+</div>
+      </div>
+  <div id='lockbody'> 
+    <div id='keyhole'>
+      <div id='topkeyhole'></div>
+      <div id='bottomkeyhole'></div>
+    </div>
+</div>
+  <div id='keyspace'>
+  <i class="fas fa-key"></i>
+  </div>
+</div>
+</div>
+
+<div style="
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    background: transparent;
+    text-align: center;
+    height: 20px;
+    margin-top: 0;
+    margin-bottom: 10px;
+" id='accessgranted'>Sign in to host more games</div>
+
+<div class='fieldsetfadeout subscribe1 freeplay' style="
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    background: transparent;
+    height: 40px;
+" id='subscribe1title'>Sign In</div>
+      <form id='signinform' class='fieldsetfadeout subscribe1'>
+        <div>
+        <label>Email: </label><input id='signinemail' name='signinemail' class='no-curve' type="email"></div>
+        <div style='position:relative'>
+        <label>Password: </label><input id='signinpassword' name='signinpassword' class='no-curve' type='password' autocomplete='off'><i class="fa fa-eye" id='eyeball'></i></div>
+        <div><button id='signinbutton' type="submit">Sign In</button></div>
+        
+      </form>
+        <div style='display: none;'><button id='retrieveusernamebutton' type="submit">Retrieve Username</button></div>
+        <div style='display: none; transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;'><button id='retrievepasswordbutton' type="submit" style="transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;">Send Instructions</button></div>
+<div class="fieldsetfadeout subscribe1" style="
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    background: transparent;
+    text-align: center;
+    height: 20px;
+    margin-top: 0;
+    width: 131px;
+    text-decoration: underline;
+" id="forgotpassword">Forgot Password?</div>
+<div style ='height:20px; background: transparent; margin-top: -10px; margin-bottom: 10px;'>
+        <div style ='height:20px; background: transparent; font-size: 18px; text-align:center; color: red' id='signinerror'></div>
+        </div>
+<div class="fieldsetfadeout subscribe1" style='display: none; transition: background 0.2s ease-in-out;' id='passwordretrieved'><button type="button" style='transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;'>Back to Sign In</button></div> 
+<div class="fieldsetfadeout subscribe1" style="
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    background: transparent;
+    text-align: center;
+    height: 20px;
+    margin-top: 0;
+    display: none;
+" id="checkemail"></div>      
+<div id='subwrap' style="overflow: hidden; width: 100%;text-align: center;background: transparent; display: none;" class='fieldsetfadeout subscribe1'>
+  <div class='fieldsetfadeout subscribe1 exterforgot' style="
+    text-align: center;
+    font-size: 25px;
+    background: none;
+    margin-bottom: 10px;
+    margin-top: 0px;
+    height: 30px;
+">Subscription Plans</div>
+<div class="subplan fieldsetfadeout subscribe1 freeplay exterforgot" id="freeplay"><span class='subname'>Free Play</span>
+
+    <div class='pricing' style='padding-left: 20px; padding-right: 20px;'><span style='font-weight:normal;' class='subtime'>Sign up for free and unlock the next 2 games!</span></div>
+ 
+</div>
+    <div class="subplan fieldsetfadeout subscribe1 exterforgot" id="casualplay"><span class='subname'>Casual Play</span>
+
+    <div class='pricing'><span class='subprice'>$0.99</span><br/><span style='font-weight:normal;' class='subtime'>monthly</span></div>
+ 
+</div>
+    <div class="subplan fieldsetfadeout subscribe1 exterforgot" id='frequentfun'><span class='subname'>Frequent Fun</span>
+
+<div class='pricing'><span class='subprice'>$9.99</span><br/><span class='subtime'>annually</span></div>
+</div>
+    <div class="subplan fieldsetfadeout subscribe1 exterforgot" id='ultimatehost'>
+    <span class='subname'>Ultimate Host</span>
+
+<div class='pricing'><span class='subprice'>$19.99</span><br/><span class='subtime'>lifetime</span></div>
+</div> 
+</div>
+<div class='fieldsetfadeout subscribe1 exterforgot sign-up-parent' id='notahost'><button class="sign-up">Sign Up</button></div>
+<form id="payment-form" class='form-control subscribe2' autocomplete="off">
+  <div class='fieldsetfadeout' style="
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size: 25px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-weight: bold;
+    background: transparent;
+" id="createorupgrade">Create an Account</div>
+  <div class="form-row" style='height: auto; background: none;'>
+    <div><input type='text' placeholder='First Name' name='first_name' required onkeydown="return alphaOnly(event);" minlength="2"></div>
+    <div><input type='text' placeholder='Last Name' name='last_name' required onkeydown="return alphaOnly(event);" minlength="2"></div>
+    <div><input type='email' placeholder='Email Address' name='email' id='newemail' required></div>
+    <div><input type='password' placeholder='Password' name='password' id='newpass' required></div>
+    <div><input type='password' placeholder='Confirm Password' name='confpassword' id='confpass' required></div>
+    <div>
+      <select style="
+    height: 100%;
+    font-family: Helvetica;
+    font-size: 20px;
+    width: 100%;
+    /* text-align: center; */
+    /* text-align-last: center; */
+    text-indent: 5px;
+    background: transparent;
+    color: white;
+    border: none;
+    border-bottom: 2px solid white;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    outline: none;
+    cursor: pointer;
+" id='subandamount' name='amount'>
+  <option class='freeplay' value="0">Free Play - Free sign up</option>
+  <option value="99">Casual Player - $0.99 monthly</option>
+  <option value="999">Frequent Fun - $9.99 annually</option>
+  <option value="1999">Ultimate Host - $19.99 lifetime</option>
+</select>
+    </div>
+    <div id="card-element" style='height: 20px;'>
+      <!-- A Stripe Element will be inserted here. -->
+    </div>
+
+    <!-- Used to display form errors. -->
+    <div id="card-errors" role="alert" style="background:none; height: 20px;margin: -10px 0px -10px 0px;"></div>
+  </div>
+
+  <button id='joinaccount'>Join</button>
+  <div id="backtosignin">Back</div>
+</form>
+<form action="/charge/" method="post" id="chargeform" class='form-control subscribe3'>
+  <div class='fieldsetfadeout' style="
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size: 33px;
+    font-weight: bold;
+    background: transparent;
+">Confirm</div>
+<p style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;">A confirmation code has been sent to your email. <br/> Please check your spam or junk folder.</p>
+  <div class="form-row no-vanish" style='height: auto; background: none;'>
+    <input type='hidden' id='conffname' placeholder='First Name' name='first_name' required>
+    <input type='hidden' id='conflname' placeholder='Last Name' name='last_name' required>
+    <input type='hidden' id='confemail' placeholder='Email Address' name='email' required>
+    <input type='hidden' id='confpword' placeholder='Password' name='password' required>
+    <input type='hidden' id='confamount' placeholder='Password' name='amount' required>
+    <input type='hidden' id='conftoken' placeholder='Password' name='stripeToken' required>
+
+    <div style='height: 40px;'><input id='confcode' type='text' maxlength="6" size="20" style="text-transform:uppercase; text-align: center" placeholder="Confirmation Code"></div>
+  </div>
+
+  <div><button id='confcodesubmit'>Confirm</button></div>
+  <div style='background: transparent; color: red; display: none; text-align: center;' id='incorrectconfcode'>Invalid Code</div>
+</form>
+
+
+
+

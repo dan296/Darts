@@ -1,0 +1,32 @@
+#pagetitle svg{
+    transform: translate(0,5px) scale(1);
+}
+#button1, #button2{
+    cursor: pointer; 
+    font-size: 20px; 
+    height: 35px; 
+    border-radius: 20px; 
+    width: 200px; 
+    outline: none; 
+    transition: 0.2s ease-in-out; 
+    border: 2px solid;
+}
+.gamestyle{
+    display: inline-block;
+    float: left; 
+    width: 50%; 
+    text-align: center;
+    margin-top:10px; 
+    margin-bottom: 10px;
+}
+@media screen and (max-width: 812px) {
+    #pagetitle svg{
+        transform: translate(0,-9px) scale(0.8);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .gamestyle{
+        width: 100%;
+    }
+}

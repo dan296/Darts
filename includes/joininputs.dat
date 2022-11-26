@@ -1,0 +1,5 @@
+<div class='joincontainer'><input id="gamecodeinput" name="gamecode" type="text" class="inputupper" placeholder="ENTER CODE" required="required" maxlength="5" pattern=".{5,}" onkeydown="return alphaOnly(event);" title="5 characters required">
+<img id="vericon"/></div>
+<div class='joincontainer'><input type="submit" id="joinbutton" value="Join"></div>
+<div class='joincontainer'><button type="button" class="cancel" id="cancelbutton"><i class="fa fa-arrow-down"></i> Cancel</button></div>
+

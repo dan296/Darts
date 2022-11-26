@@ -1,0 +1,37 @@
+<?php
+$url = "https://beta.gamenight.plus/";
+$path = "/home/araihzsn/gamenight/beta/";
+?>
+
+<script src="<?php echo $url; ?>js/refreshCSS.js"></script>
+
+<!-- Meta tags -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- Link font tags -->
+<link href="https://fonts.googleapis.com/css?family=Varela+Round:300,400,700|Raleway:400i|Lato:300,400,700|Roboto:300,400,700|Open+Sans:300,400,700|Luckiest+Guy:300,400,700|Saira:300,400,700|Montserrat:700|Source+Sans+Pro:300,400,700" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+<!-- JQuery -->
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="<?php echo $url; ?>js/jquery.easing.1.3.js"></script>
+<script src="<?php echo $url; ?>js/detectmobilebrowser.js"></script>
+
+<!-- Link css tags -->
+<link rel="stylesheet" type="text/css" href="<?php echo $url; ?>css/index.css">
+<link rel="stylesheet" type="text/css" href="<?php echo $url; ?>css/animate.css/animate.css">
+
+<!-- Link icon tags -->
+<link rel="icon" href="<?php echo $url; ?>imgs/gnpLogoRound.png">
+<link rel="apple-touch-icon" sizes="100x100" href="<?php echo $url; ?>imgs/gnpLogo.png" />
+
+<!-- JS Script tags -->
+<script src="<?php echo $url; ?>js/spin.js"></script>
+<script src="<?php echo $url; ?>js/spinopts.js"></script>
+
+<!-- Old tags for deletion -->
+<!--<link rel="stylesheet" type="text/css" href="<?php echo $url; ?>css/fonts.css">-->

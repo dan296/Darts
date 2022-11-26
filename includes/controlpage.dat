@@ -1,0 +1,19 @@
+<div id="controlbars"><?php include('./svg/controlbars.svg')?><!--<div class="horiz-cross horiz-cross-top"></div><div class="horiz-cross"></div><div class="horiz-cross horiz-cross-bottom"></div>--></div>
+<div id="controlpage">
+<div id="controlwrap">
+<div class="controlbutton" id='go_home'><div id="minitemplogo" class="logo" style="font-size: 30px;"><img src="../../imgs/gnpTransparentLogo.png" class="logoimg" style="width: auto;"></div></i><span class="controllogolabel">Home</span></div>
+<div class = "controlbutton" id="gosignin"><div id="minisigninlogo" class="logo"><i class="fas fa-sign-in-alt"></i></div><span class="controllogolabel">Sign In</span></div>
+<div class = "controlbutton" id="goprofile"><div id="miniprofilelogo" class="logo"><i class="fas fa-user-alt" style="position: absolute;top: 0;bottom: 0;left: 0;right: 0;margin: auto;height: 23px;"></i></div><span class="controllogolabel">My Account</span></div>
+<div class = "controlbutton" id="gosignout"><div id="minisignoutlogo" class="logo"><i class="fas fa-sign-out-alt"></i></div><span class="controllogolabel">Sign Out</span></div>
+<div class = "controlbutton nologo" id="gp_video" class="gp_tab"><div id="videologo" class="logo"><i class="fas fa-video"></i></div><span class="controllogolabel logolabel">Video</span></div>
+<div class = "controlbutton nologo" id="gp_gamesetup"><div id="setuplogo" class="logo"><i class="fas fa-play" style='left:2px;'></i></div><span class="controllogolabel logolabel">Setup</span></div>
+<div class = "controlbutton nologo" id="gp_instructions"><div id="instructionslogo" class="logo"><i class="fas fa-book-open"></i></div><span class="controllogolabel logolabel">Instructions</span></div>
+<div class = "controlbutton" id="go_guide"><div id="miniguidelogo" class="logo"><i class="fas fa-book"></i></div><span class="controllogolabel">Guide</span></div>
+<div class = "controlbutton" id="go_about"><div id="miniaboutlogo" class="logo"><i class="fas fa-info"></i></div><span class="controllogolabel">About</span></div>
+<div class = "controlbutton" id="go_contact"><div id="minifeedbacklogo" class="logo"><i class="fas fa-comment-alt" style='top: 6px;'></i></div><span class="controllogolabel">Contact</span></div>
+<div class = "controlbutton" id="go_shop"><div id="minishoplogo" class="logo"><i class="fas fa-shopping-cart"></i></div><span class="controllogolabel">Shop</span></div>
+
+<div id="controlfooter"><div style="bottom: 40px;" id="go_terms">Terms of Service</div><div style="bottom: 20px;" id="go_privacy">Privacy Policy</div><div id="version">v1.2.0</div></div>
+</div>
+<div id="controlback" class="controlbutton"><div class="vert-cross"></div><div class="horiz-cross"></div></div>
+</div>

@@ -1,0 +1,25 @@
+<?php
+$url = "https://beta.gamenight.plus/";
+$path = "/home/araihzsn/gamenight/beta/";
+$css_version = 1;
+//include('generalFunctions.php');
+?>
+
+<!-- Meta tags -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+
+<!-- Link font tags -->
+<link href="https://fonts.googleapis.com/css?family=Varela+Round:300,400,700|Raleway:400i|Lato:300,400,700|Luckiest+Guy:300,400,700|Saira:300,400,700|Montserrat:400,500,600,700|Source+Sans+Pro:300,400,700|Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+<!-- FONT AWESOME ICONS -->
+<link rel="stylesheet" href="css/fontawesome/v5.9.0/css/all.css">
+
+<!-- JQuery -->
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+<!-- Link INDEX.CSS -->
+<link rel="stylesheet" type="text/css" href="css/index-update.css?refreshcss=<?php echo $css_version; ?>">
