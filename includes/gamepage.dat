@@ -34,7 +34,7 @@ foreach($gamepagestructurelines as $gamepagestructureline){
 		</title>
 		<link rel="stylesheet" type="text/css" href="<?php echo $url . '/css/' . $gamepagecss; ?>">
 	</head>
-<?php include("../includes/controlpage.dat"); ?>
+<?php include("includes/controlpage.dat"); ?>
 	<body>
 		<div id="pagewrapper">
 			<div id="header">
