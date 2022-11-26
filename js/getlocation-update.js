@@ -925,8 +925,6 @@ checkChrome();
 var chromecode = '';
 var chromePresent = false;
 
-//DELETING GAMES OLDER THAN TWO MONTHS
-$.ajax({url: "ajax/deleteOldGames.php"});
 
 $('#mainpagetitle svg').delay(500).fadeIn();
 
