@@ -645,7 +645,7 @@ var scrollBottom
 function underlinebarmove(){
   scrollBottom = $('#gamepage').scrollTop();
   for(var i = 0; i < instDivs.length; i++){
-      if(scrollBottom >= $('#'+instDivs[i]).offset().top - ($('#pagecontent').offset().top) - $('#gamepage_header').offset().top + 10){
+      if(scrollBottom >= $('#'+instDivs[i]).offset().top - ($('#pagecontent').offset().top) - $('#header').offset().top + 10){
         pagenavw = $('#pagenav' + (i+1) + ' .navwords').width();
         pagenavlocate = $('#pagenav' + (i+1) + ' .navwords').offset().left - $('#controlpage').width();
         $('#navunderlineelement').stop().animate({
