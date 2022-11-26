@@ -732,7 +732,7 @@ $('#userstartgamebutton').click( function(event) {
     $.ajax({
       async: 'false',
       type: 'post',
-      url: '../bullseye/clearSession.php',
+      url: 'clearSession.php',
       data: {clearing: true},
       success: function(data){
         if(data){
