@@ -38,7 +38,7 @@ foreach($gamepagestructurelines as $gamepagestructureline){
 	<body>
 		<div id="pagewrapper">
 			<div id="header">
-				<div id="pagetitle"><?php include($gamepageid.'pagetitle.svg'); ?></div>
+				<div id="pagetitle" style="margin: 10px auto 10px auto;"><?php include($gamepageid.'pagetitle.svg'); ?></div>
                 <script>
                 $( document ).tooltip();
                 $(document).tooltip({
@@ -220,7 +220,6 @@ $i++;
 } ?>
 
 </script>
-				<div id="headerfader"></div>
 			</div>
 			<div id="pagecontent" class="animated fadeIn">
 			<?php
