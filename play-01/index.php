@@ -93,8 +93,8 @@ form button{
   background-color: var(--bg);
   margin-top: 10px;
   border:white;
-  border-radius: 20px;
-  color:#40A4FF;
+  border-radius: 25px;
+  color:#1d1d1d;
   transition: 0.2s ease-in-out;
   cursor: pointer;
   outline: none;
