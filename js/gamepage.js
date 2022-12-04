@@ -306,10 +306,10 @@ $('#cpo, html').css('background-color',color);
 	$('#userstartgamebutton, #userresetbutton, #gamesetuptable #button1, #gamesetuptable #button2, #selectgamestyle').css({"background-color" : "#1d1d1d", 'color': color, 'border-color': color});
 	$("#userstartgamebutton, #userresetbutton").mouseover(function() {
 		
-		$(this).css({"background-color": color, "border-color": color, "color": "white"});
+		$(this).css({"background-color": color, "border-color": color, "color": "#1d1d1d"});
 	});
 	$("#userstartgamebutton, #userresetbutton").mouseout(function() {
-  $(this).css({"background-color" : "white", 'color': color, 'border-color': color});
+  $(this).css({"background-color" : "#1d1d1d", 'color': color, 'border-color': color});
 	});
 
   
