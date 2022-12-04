@@ -7,15 +7,15 @@ $('#button1').click(function(evt){
 	thispagecolor = $('.instructionsheading').css('color');
 	evt.preventDefault();
 	$('#changegamename').prop('value',this.innerHTML);
-		$('#button1').css({'background': thispagecolor, 'color': '#1d1d1dh'});
+		$('#button1').css({'background': thispagecolor, 'color': '#1d1d1d'});
 		$('#button2').css({'background': 'none', 'color': thispagecolor});
 
 })
 
 //Default button1 clicked
-$(document).ready(function(){
+setTimeout(function(){
 	$('#button1').click();
-})
+}, 500);
 
 
 $('#button2').click(function(evt){
@@ -23,7 +23,7 @@ $('#button2').click(function(evt){
 	allowmouseout1 = true;
 	evt.preventDefault();
 	$('#changegamename').prop('value',this.innerHTML);
-		$('#button2').css({'background': thispagecolor, 'color': '#1d1d1dh'});
+		$('#button2').css({'background': thispagecolor, 'color': '#1d1d1d'});
 		$('#button1').css({'background': 'none', 'color': thispagecolor});
 
 		$("#gamesetuptable #button2").mouseover(function(evt) {
