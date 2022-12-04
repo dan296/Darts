@@ -9,11 +9,12 @@
 <span class="instructionsheading">Setup:</span>
 <ol>
 <li>Insert the number of people playing when prompted with: "How many players are playing?"</li>
+<li class="t01">Insert the score to begin with when prompted with: "Enter Mode: 301, 501, 701, 1001"</li>
 <li>The outer ring of the dartboard counts as a double hit, and the inner ring of the dartboard counts as a triple hit.</li>
 <li>The outer ring of the bullseye counts as 25 and the inner ring of the bullseye counts as double bullseye (or 50).</li>
 </ol>
 <span class="instructionsheading">Gameplay:</span>
-<ol>
+<ol class="wcc">
 <span class="instructionssubheading">Finding the Numbers</span>
 <li>There will be 7 randomly generated numbers of the 21 numbers on the dartboard (bullseye = 25).</li>
 <li>Each player will take their turn by throwing three darts one at a time.</li>
@@ -27,22 +28,37 @@
 <li>Players can give others points by hitting an open number after they have closed it.</li>
 <li>Players who have not closed that number will receive that number of points.</li>
 </ol>
-<span class="instructionsheading" id="win">How to Win:</span>
-					<ol>
-						<li>A player wins by closing all of the 7 numbers and having the least score.</li>			
-					</ol>
-
-<span class="instructionsheading" id="rules">Rules and Tips:</span>
-<ol>
-<li>The center of the dartboard must be 5' 8" from the floor.</li>
-<li>The dartboard must be 7' 9" from the throwing line.</li>
+<ol class="t01">
+	<span class="instructionssubheading">Reducing the Numbers</span>
+		<li>Each player will take their turn by throwing three darts one at a time.</li>
+		<li>The player will then click on the numbers that were hit on the digital dartboard.</li>
+		<li>The score for that player will reduce by the total number hit by the darts.</li>
+	<span class="instructionssubheading">Closing Out</span>
+		<li>A player can only close their score to 0 by hitting a double (outer ring).</li>
+		<li>If a player closes by hitting other than a double or goes below 0 (bust), their score will return to what it was at the beginning of their turn.</li>
 </ol>
-
+<span class="instructionsheading" id="win">How to Win:</span>
+	<ol class="wcc">
+		<li>A player wins by closing all of the 7 numbers and having the least score.</li>			
+	</ol>
+	<ol class="t01">
+		<li>A player wins by reducing their score to 0.</li>	
+		<li>A player can only close their score to 0 by hitting a double (outer ring).</li>
+	</ol>	
+<span class="instructionsheading" id="rules">Rules and Tips:</span>
+	<ol>
+		<li>The center of the dartboard must be 5' 8" from the floor.</li>
+		<li>The dartboard must be 7' 9" from the throwing line.</li>
+	</ol>
 <div style="margin-top: 20px; margin-bottom: 30px;">
-						<span class="instructionssubheading" style="margin-top: 40px; margin-left: 20px;">Tips</span>
-						<ol>
-						<li>Look to open bigger numbers if you are losing and lower numbers if you are winning.</li>
-						<li>Try to close the biggest numbers as soon as possible.</li>
-						</ol>
-					</div>
+	<span class="instructionssubheading" style="margin-top: 40px; margin-left: 20px;">Tips</span>
+		<ol class="wcc">
+			<li>Look to open bigger numbers if you are losing and lower numbers if you are winning.</li>
+			<li>Try to close the biggest numbers as soon as possible.</li>
+		</ol>
+		<ol class="t01">
+			<li>Look to hit bigger numbers in the beginning.</li>
+			<li>Try to get to an even number.</li>
+		</ol>
+</div>
 

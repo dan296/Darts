@@ -5,6 +5,8 @@ $('#button1').click(function(evt){
 	allowmouseout1 = false;
 	allowmouseout2 = true;
 	thispagecolor = $('.instructionsheading').css('color');
+	$('.t01').hide();
+	$('.wcc').show();
 	evt.preventDefault();
 	$('#changegamename').prop('value',this.innerHTML);
 		$('#button1').css({'background': thispagecolor, 'color': '#1d1d1d'});
@@ -21,6 +23,8 @@ setTimeout(function(){
 $('#button2').click(function(evt){
 	allowmouseout2 = false;
 	allowmouseout1 = true;
+	$('.t01').show();
+	$('.wcc').hide();
 	evt.preventDefault();
 	$('#changegamename').prop('value',this.innerHTML);
 		$('#button2').css({'background': thispagecolor, 'color': '#1d1d1d'});
