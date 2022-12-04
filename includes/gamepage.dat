@@ -29,7 +29,7 @@ foreach($gamepagestructurelines as $gamepagestructureline){
 <html>
 	<head>
 		<?php include('includes/head.dat'); ?>
-		<link rel="stylesheet" type="text/css" href="css/gamepage.css">
+		<link rel="stylesheet" type="text/css" href="css/gamepage.css?v=<?php echo rand() ?>" >
 		<title>Bullseye Brawl
 		</title>
 		<link rel="stylesheet" type="text/css" href="css/bullseye.css">
