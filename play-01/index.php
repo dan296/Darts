@@ -285,7 +285,8 @@ canvas {
 
 <!-- END -->
 <script>
-$('body').css('background', localStorage.getItem('color'));
+let root = document.documentElement;
+  root.style.setProperty('--bg', localStorage.getItem('color'));
   function updateSessionVariables(){
     $nameinputs = [];
     for(var i = 0; i < $numplayers; i++){

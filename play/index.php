@@ -289,6 +289,7 @@ svg:hover{
 </div>
 
 <script>
+  let root = document.documentElement;
   root.style.setProperty('--bg', localStorage.getItem('color'));
   function updateSessionVariables(){
     $nameinputs = [];
