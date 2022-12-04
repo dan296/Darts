@@ -86,9 +86,8 @@ border:none;
 }
 
 form button{
-  width: 25%;
+  width: 200px;
   height: 40px;
-  float: left;
   font-size: 15pt;
   background-color: var(--bg);
   margin-top: 10px;

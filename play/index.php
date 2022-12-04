@@ -105,7 +105,7 @@ transition: background-color 1s ease;
 }
 
 form button{
-  width: 20%;
+  width: 200px;
   height: 50px;
   font-size: 15pt;
   background-color: var(--bg);
