@@ -28,24 +28,24 @@ $('#button2').click(function(evt){
 
 $("#gamesetuptable #button1").mouseover(function() {
 	thispagecolor = $('.instructionsheading').css('color');
-		$(this).css({"background-color": thispagecolor, "border-color": thispagecolor, "color": "white"});
+		$(this).css({"background-color": thispagecolor, "border-color": thispagecolor, "color": "#1d1d1d"});
 	});
 
 	$("#gamesetuptable #button2").mouseover(function() {
 thispagecolor = $('.instructionsheading').css('color');
-		$(this).css({"background-color": thispagecolor, "border-color": thispagecolor, "color": "white"});
+		$(this).css({"background-color": thispagecolor, "border-color": thispagecolor, "color": "#1d1d1d"});
 	
 	});
 
 	$("#gamesetuptable #button1").mouseout(function(evt) {
 		if(allowmouseout1){
-			$(this).css({"background-color": 'white', "border-color": thispagecolor, "color": thispagecolor});
+			$(this).css({"background-color": '#1d1d1d', "border-color": thispagecolor, "color": thispagecolor});
 		}
 	});
 
 	$("#gamesetuptable #button2").mouseout(function() {
 		if(allowmouseout2){
-			$(this).css({"background-color": 'white', "border-color": thispagecolor, "color": thispagecolor});
+			$(this).css({"background-color": '#1d1d1d', "border-color": thispagecolor, "color": thispagecolor});
 		}
 	});
 
