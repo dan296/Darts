@@ -247,7 +247,7 @@ $i++;
 			$i++;
 			} ?>
 			</div>
-			<script src="js/bullseye.js"></script>
+			<script src="js/bullseye.js?v=<?php echo rand() ?>"></script>
 		</div>
 		<a id='outerlink' style='opacity:0'></a>
 		<script src="js/getlocation-update.js"></script>
