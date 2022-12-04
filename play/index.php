@@ -231,7 +231,7 @@ svg:hover{
 @media screen and (max-width: 812px) {
     form button{
         display: block;
-        margin: auto;
+        margin: 10px auto 10px auto;;
     }
 }
 #container {
