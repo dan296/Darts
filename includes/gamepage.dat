@@ -36,7 +36,7 @@ foreach($gamepagestructurelines as $gamepagestructureline){
 	</head>
 <?php include("includes/controlpage.dat"); ?>
 	<body>
-		<div id="pagewrapper">
+		<div id="pagewrapper" style="padding: 20px">
 			<div id="header">
 				<div id="pagetitle" style="margin: 10px auto 10px auto;"><?php include($gamepageid.'pagetitle.svg'); ?></div>
                 <script>

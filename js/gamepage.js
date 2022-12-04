@@ -94,7 +94,7 @@ $('#userstartgamebutton').click( function(event) {
 				);
 				$('#userjoingamebutton').css('color',color);
 				$('#userjoingamebutton').hover(function(){
-				    $(this).css('color', "white");
+				    $(this).css('color', "#1d1d1d");
             	},function(){
             		$(this).css('color', color);
             	});
@@ -303,7 +303,7 @@ $('#cpo, html').css('background-color',color);
 	$('#navunderlineelement').css('background-color', color);
 	$('#navunderlineelement').css('border-color', color);
   $('.inc_button').css('color',color);
-	$('#userstartgamebutton, #userresetbutton, #gamesetuptable #button1, #gamesetuptable #button2, #selectgamestyle').css({"background-color" : "white", 'color': color, 'border-color': color});
+	$('#userstartgamebutton, #userresetbutton, #gamesetuptable #button1, #gamesetuptable #button2, #selectgamestyle').css({"background-color" : "#1d1d1d", 'color': color, 'border-color': color});
 	$("#userstartgamebutton, #userresetbutton").mouseover(function() {
 		
 		$(this).css({"background-color": color, "border-color": color, "color": "white"});
