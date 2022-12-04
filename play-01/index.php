@@ -27,6 +27,9 @@ $path = "/home/araihzsn/gamenight/";
 <title>gameNight+ | Playing Wildcard Cricket</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <style>
+  :root{
+    --bg: white;
+  }
 html{
   overflow: hidden;
 }
@@ -44,6 +47,7 @@ transition: opacity 1s ease, background-color 1s ease;
        -moz-user-select: none; /* Firefox */
         -ms-user-select: none; /* Internet Explorer/Edge */
             user-select: none;
+background: var(--bg);
 }
 #gamepage{
     height: 100%;
@@ -86,7 +90,7 @@ form button{
   height: 40px;
   float: left;
   font-size: 15pt;
-  background-color: white;
+  background-color: var(--bg);
   margin-top: 10px;
   border:white;
   border-radius: 20px;
@@ -97,8 +101,8 @@ form button{
 }
 
 form button:hover{
-  background-color: #40A4FF;
-  color:white;
+  background-color: #1d1d1d;
+  color: var(--bg);
 }
 
 form{
