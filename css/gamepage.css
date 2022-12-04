@@ -249,6 +249,10 @@ iframe{
 		border-radius: 10px;
 	    
 	}
+	#pagetitle{
+	    width: 320px;
+	    height: 70px;
+	}
 @media screen and (max-width: 812px) {
     #gamecode{
     	margin-top: 0;
@@ -256,10 +260,7 @@ iframe{
     .instructionsheading{
     	font-size: 14pt;
     }   
-	#pagetitle{
-	    width: 320px;
-	    height: 70px;
-	}
+	
     #pagecontent{
     	font-size: 12pt;
     }
