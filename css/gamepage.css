@@ -93,9 +93,6 @@ html, body{
 .instructionsheading{
 	font-weight: bold;
 	text-transform: uppercase;
-	display: block;
-	text-align: center;
-	text-decoration: underline;
 }
 .instructionssubheading{
 	font-weight: bold;
