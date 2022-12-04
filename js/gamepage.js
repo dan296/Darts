@@ -273,10 +273,10 @@ $('#scrollcontainer').css('height',(($(window).height()) - ($("#footer").height(
 //$('#scrollbar').draggable({ axis: "y", containment: 'parent'});
                   
 $(function(){
-	color = localStorage['color'];
   if(color == undefined){
     color = randcolor();
   }
+  localStorage.setItem("color", color);
   
 $('#cpo, html').css('background-color',color);
   $('#templogo').css('border-color', color);
