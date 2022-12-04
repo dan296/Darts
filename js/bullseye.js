@@ -12,6 +12,9 @@ $('#button1').click(function(evt){
 
 })
 
+//Default button1 clicked
+$('#button1').click();
+
 $('#button2').click(function(evt){
 	allowmouseout2 = false;
 	allowmouseout1 = true;
