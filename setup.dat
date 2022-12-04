@@ -1,4 +1,3 @@
-<span class="instructionsheading">Game Setup:</span>
 <form id="gamesetupform">
 	<input type="hidden" name="gamename" id="changegamename" value="Wildcard Cricket">
 	<input id='lat' type="hidden" name="latitude" value="0">
