@@ -285,7 +285,7 @@ svg:hover{
 </div>
 
 <script>
-
+$('body').css('background', localStorage.getItem('color'));
   function updateSessionVariables(){
     $nameinputs = [];
     for(var i = 0; i < $numplayers; i++){
