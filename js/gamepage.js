@@ -287,7 +287,7 @@ $('#cpo, html').css('background-color',color);
 	},function(){
 		$(this).css('background-color', 'transparent');
 	});
-  $('.fa-info-circle, body').css('color',color);
+  $('.fa-info-circle body').css('color',color);
   $('#charpage').css('background-color',color);
     $('#controlbars div').css('background-color',color);
     $('#controlbars').hover(function(){
