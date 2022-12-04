@@ -34,7 +34,6 @@ foreach($gamepagestructurelines as $gamepagestructureline){
 		</title>
 		<link rel="stylesheet" type="text/css" href="css/bullseye.css">
 	</head>
-<?php include("includes/controlpage.dat"); ?>
 	<body>
 		<div id="pagewrapper" style="padding: 20px">
 			<div id="header">

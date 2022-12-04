@@ -288,7 +288,6 @@ canvas {
       var namestrid = '#playernameinput'+(i+1);
       $nameinputs.push($(namestrid).val());
     }
-    console.log($nameinputs);
     $.ajax({
         url: "updateSessionVariables.php",
         type: "post",
@@ -321,7 +320,6 @@ $(document).ready(function(){
                   $nameinputs = [];
                   <?php if(isset($_SESSION["numplayers"])){ ?>
                   $numplayers = <?php echo $_SESSION["numplayers"]; ?>;
-                  console.log($numplayers);
                   <?php }else{ ?>
                     do{
                     $numplayers = parseInt(prompt("How many players?"));
